@@ -1,0 +1,20 @@
+- name : Task level variables 
+  hosts: local
+  connection: local
+  vars:
+    COURSE: Ansible
+    DURATION: 7days
+    LEARNER: Kishore
+  tasks:
+  - name: Play level vars
+    ansible.builtin.debug:
+      msg: "Hello {{ COURSE }} , Duration is {{ DURATION }} , Learner is {{ LEARNER }}"  
+      
+  tasks:
+  - name: Task level vars 
+    vars:
+      COURSE: Devops with AWS
+      DURATION: 4months 
+      LEARNER: Kishore Kothapalli
+    ansible.builtin.debug:
+      msg: "Hello {{ COURSE }} , Duration is {{ DURATION }} , Learner is {{ LEARNER }}"
