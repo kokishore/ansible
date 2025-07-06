@@ -5,6 +5,7 @@
   - name: Play1
     ansible.builtin.debug:
       msg: "Hellow This is task1 from play1"
+
   - name: Play2
     ansible-buitin.debug:
       msg: :heelow This is task2 from Play1"
@@ -17,6 +18,7 @@
   - name: Play2
     ansible.builtin.debug:
       msg: "Hellow This is task1 from play2"
+      
   - name: Play2
     ansible-buitin.debug:
       msg: :heelow This is task2 from Play12      
