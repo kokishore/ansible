@@ -1,6 +1,7 @@
 - name: Install packages using loops 
   hosts: local
   connection : local 
+  become: yes
   tasks:
   - name : Install package 
     ansible.builtin.package:
@@ -11,4 +12,3 @@
     - mysql
     - nodejs
     - git 
-      
