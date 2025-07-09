@@ -1,0 +1,7 @@
+- name : Gathering Facts 
+  hosts: local
+  connection: local
+  tasks:
+  - name: Gatheringfacts about target server
+    ansible.builtin.debug:
+      msg: "{{ ansible_facts }}"
