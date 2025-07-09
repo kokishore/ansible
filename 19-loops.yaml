@@ -4,10 +4,10 @@
   become: yes
   tasks:
   - name: install packages
-    ansible.builtin.package:
-      name : " {{ item.name }}"
-      state: " {{ item.state }}"
-    loop:
-    - { name: 'nginx', state: 'removed'}
-    - { name: 'mysql', state: 'removed'}
-    - { name: 'zip', state: 'present'}  
+  ansible.builtin.package:
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
+  loop:
+    - { name: "nginx", state: "absent" }
+    - { name: "mysql", state: "absent" }
+    - { name: "zip", state: "present" }  
